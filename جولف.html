@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golf Resort</title>
+    <link rel="stylesheet" href="جولف css.css">
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+  
+    
+    <div class="top-line"></div>
+
+    <div class="hole">
+        <h1>HOLE IN ONE</h1>
+        <h2>The luxury golf resort – where precision and elegance meet in breathtaking natural surroundings</h2>
+    </div>
+
+<header class="header">
+    <ul class="buttons">
+        <li class="dropdown">
+            <a href="#" onclick="toggleMenu(event)">MENU</a>
+            <div class="dropdown-content" id="menuDropdown">
+                <a href="restaurants.html">Restaurants</a>
+                <a href="hotels.html">Hotels</a>
+                <a href="seaview.html">Sea view stadium</a>
+                <a href="custom packages.html">Custom packages</a>
+                <a href="training ground.html">Training ground</a>
+                <a href="questions.html">Questions</a>
+            </div>
+        </li>
+        <li><a href="golf countact.html">CONTACT</a></li>
+        <li><a href="جولف.html">HOME</a></li>
+    </ul>
+</header>
+    
+<img src="logoo.jpeg" alt="Website Logo" class="logo">
+
+
+
+<div class="search-box">
+    <input type="text" placeholder="Search...">
+    <button type="submit"><i class="fas fa-search"></i></button>
+</div>
+
+<div class="image-container">
+    <img src="bgg.png" alt="Golf Resort" class="circle-image">
+</div>
+
+<div class="image-container">
+    <img src="golff.jpeg" alt="Golf Resort" class="circle-image2">
+</div>
+
+<div class="image-container">
+    <img src="golf3.jpeg" alt="Golf Resort" class="circle-image3">
+</div>
+
+<div class="image-container">
+    <img src="golf2.jpeg" alt="Golf Resort" class="circle-image4">
+</div>
+
+<div class="welcome">
+<h3>Welcome</h3>
+<h4>Welcome to Hole in one the ultimate destination for golf enthusiasts and luxury seekers. Nestled in a breathtaking natural setting, our resort offers an exceptional golfing experience with world-class courses and premium services. Whether you're a seasoned player or a beginner, we provide specialized training programs led by professional instructors to help you refine your skills. Enjoy a variety of events and tournaments throughout the year, along with our outstanding facilities, including fine dining restaurants, a luxurious spa, and elegant accommodations tailored to your every need. Book your experience now.</h4>
+</div>
+
+<div class="video">
+<video width="800" height="450" controls>
+    <source src="c:\Users\Owner\Desktop\html فصل2\Black Minimalist Elegant Make Up Presentation.mp4" type="video/mp4">
+</video>
+</div>
+
+<script>
+    function toggleMenu(event) {
+        event.preventDefault();
+        document.getElementById("menuDropdown").classList.toggle("show");
+    }
+
+    // إغلاق القائمة عند النقر خارجها
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropdown a')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+
+
+</body>
+</html>

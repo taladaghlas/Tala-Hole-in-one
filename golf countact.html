@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golf Resort</title>
+    <link rel="stylesheet" href="golf countactcss.css">
+
+
+
+    <style>
+     
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+    
+       <style>
+        
+   
+
+    </style>
+
+
+</head>
+<body>
+
+    <div class="top-line"></div>
+
+    <div class="countact">
+        <h1>CONTACT US</h1>
+    
+    </div>
+
+
+    <header class="header">
+        <ul class="buttons">
+            <li class="dropdown">
+                <a href="#" onclick="toggleMenu(event)">MENU</a>
+                <div class="dropdown-content" id="menuDropdown">
+                    <a href="restaurants.html">Restaurants</a>
+                    <a href="hotels.html">Hotels</a>
+                    <a href="seaview.html">Sea view stadium</a>
+                    <a href="custom packages.html">Custom packages</a>
+                    <a href="training ground.html">Training ground</a>
+                    <a href="questions.html">Questions</a>
+                </div>
+            </li>
+            <li><a href="golf countact.html">CONTACT</a></li>
+            <li><a href="جولف.html">HOME</a></li>
+        </ul>
+    </header>
+
+
+
+
+
+
+
+    
+<div class="search-box">
+    <input type="text" placeholder="Search...">
+    <button type="submit"><i class="fas fa-search"></i></button>
+</div>
+
+
+<img src="logoo.jpeg" alt="Website Logo" class="logo">
+<div class="comment-box">
+    <h2>Comments</h2>
+    <form id="commentForm">
+        <div class="form-group">
+            <input type="text" name="full_name" id="full_name" placeholder="Name and Surname...">
+        </div>
+
+        <div class="form-row">
+            <input type="text" name="location" id="location" placeholder="Country of Residence..">
+            <input type="tel" name="phone" id="phone" placeholder="Phone...">
+        </div>
+
+        <div class="form-group">
+            <input type="email" name="email" id="email" placeholder="E-mail...">
+        </div>
+
+        <div class="form-group">
+            <input type="text" name="discovery" id="discovery" placeholder="Your opinion about the website...">
+        </div>
+
+        <div class="form-group">
+            <textarea name="comment" id="comment" placeholder="Message..."></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Send Message </button>
+
+        <p id="message" class="message"></p> 
+    </form>
+</div>
+
+
+<div class="info-container">
+    <h2><span>Request</span> Information</h2>
+    <p>For more information write to <a href="mailto:holeinone@palmaresresort.com">holeinone@palmaresresort.com</a> or complete the form. We will get in touch with you.</p>
+    
+    <div class="info-grid">
+        <div class="info-box">
+            <h3>For reservation</h3>
+            <p>Email: <a href="mailto:holeinone@palmaresresort.com">holeinone@palmaresresort.com</a></p>
+            <p>Phone: +351 917 766 932</p>
+        </div>
+        
+        <div class="info-box">
+            <h3>Sea View Stadium</h3>
+            <p>Email: <a href="mailto:holeinone@palmaresresort.com">holeinone@palmaresresort.com</a></p>
+            <p>Phone: +351 282 249 880</p>
+        </div>
+
+        <div class="info-box">
+            <h3>Hotels</h3>
+            <p>N.º RNET: 10685</p>
+            <p>Email: <a href="mailto:signatureapartments@palmaresresort.com">signatureapartments@palmaresresort.com</a></p>
+            <p>Phone: +351 282 249 870</p>
+        </div>
+
+        <div class="info-box">
+            <h3>CLUBHOUSE RESTAURANT</h3>
+            <p>Phone: +351 282 790 508</p>
+        </div>
+
+        <div class="info-box">
+            <h3>GOLF</h3>
+            <p>Email: <a href="mailto:golf@palmaresresort.com">golf@palmaresresort.com</a></p>
+            <p>Phone: +351 282 790 500</p>
+        </div>
+
+        <div class="info-box">
+            <h3>LOCATION</h3>
+            <p>Hole In One Resort<br> 8600-250 Portugal</p>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="social-container">
+    <p>Follow us on</p>
+    <div class="social-icons">
+        <a href="https://www.instagram.com" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        </a>
+        <a href="https://www.facebook.com" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/174/174848.png" alt="Facebook">
+        </a>
+        <a href="https://wa.me" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+    </div>
+</div>
+
+<script>
+    function toggleMenu(event) {
+        event.preventDefault();
+        document.getElementById("menuDropdown").classList.toggle("show");
+    }
+
+   
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropdown a')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+
+<script>
+    document.getElementById("commentForm").addEventListener("submit", function(event) {
+        event.preventDefault(); 
+
+        let fullName = document.getElementById("full_name").value.trim();
+        let location = document.getElementById("location").value.trim();
+        let phone = document.getElementById("phone").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let discovery = document.getElementById("discovery").value.trim();
+        let comment = document.getElementById("comment").value.trim();
+        let message = document.getElementById("message");
+
+        if (!fullName || !location || !phone || !email || !discovery || !comment) {
+            message.textContent = "❌Please complete the information";
+            message.className = "message error";
+        } else {
+            message.textContent = "✅Sent Successfully!";
+            message.className = "message success";
+
+           
+            setTimeout(() => {
+                document.getElementById("commentForm").reset();
+                message.textContent = "";
+            }, 2000);
+        }
+    });
+</script>
+
+
+
+</body>
+</html>

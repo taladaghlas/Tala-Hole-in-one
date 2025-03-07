@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golf Resort</title>
+    <link rel="stylesheet" href="seaviewcss.css">
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="top-line"></div>
+
+    <div class="hole">
+        <h1>Sea View stadium</h1>
+       
+    </div>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <button type="submit"><i class="fas fa-search"></i></button>
+    </div>
+
+
+
+
+<header class="header">
+    <ul class="buttons">
+        <li class="dropdown">
+            <a href="#" onclick="toggleMenu(event)">MENU</a>
+            <div class="dropdown-content" id="menuDropdown">
+                <a href="restaurants.html">Restaurants</a>
+                <a href="hotels.html">Hotels</a>
+                <a href="seaview.html">Sea view stadium</a>
+                <a href="custom packages.html">Custom packages</a>
+                <a href="training ground.html">Training ground</a>
+                <a href="questions.html">Questions</a>
+            </div>
+        </li>
+        <li><a href="golf countact.html">CONTACT</a></li>
+        <li><a href="جولف.html">HOME</a></li>
+    </ul>
+</header>
+    
+
+<img src="logoo.jpeg" alt="Website Logo" class="logo">
+
+<div class="image-container">
+    <img src="sea1.jpg" alt="Golf Resort" class="circle-image">
+</div>
+
+<div class="image-container">
+    <img src="seaa2.jpeg" alt="Golf Resort" class="circle-image4">
+</div>
+
+
+<div class="r1">
+    <h1> 
+
+       Professional Golf Course - An Unforgettable Sporting Experience!
+        
+       Price: $50 per hour
+        
+       Features:
+        - Professional-grade course with international standards.
+        - Modern and comfortable facilities for players.
+        - Shaded areas to ensure comfort during play.
+        - Expert trainers offering tips and coaching.
+        - Ideal venue for competitions and major events.
+        - Spacious parking and fully-equipped relaxation areas.
+        
+    The perfect opportunity to elevate your skills in a professional environment! Book now and enjoy a unique sporting experience!</h1>
+
+</div>
+
+
+<div class="r2">
+    <h1> 
+
+        Discover our golf course designed specifically for sports enthusiasts seeking excellence! We offer a professional-grade course with international standards, where you can refine your skills in a modern and comfortable environment. Enjoy a unique playing experience on a professionally designed course, with fully equipped facilities including experienced trainers, shaded areas for player comfort, and relaxation zones after your game. Whether you're a pro or a beginner, we are here to help you achieve your sports goals. Book now and experience golf at its highest level!</h1>
+
+</div>
+
+
+
+<div class="hotell">
+    <h2>UStadium of the Future</h2>
+</div>
+
+
+<script>
+    function toggleMenu(event) {
+        event.preventDefault();
+        document.getElementById("menuDropdown").classList.toggle("show");
+    }
+
+    // إغلاق القائمة عند النقر خارجها
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropdown a')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+
+
+<script src="jsgolf.js"></script>
+</body>
+</html>

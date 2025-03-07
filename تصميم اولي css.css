@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: white; /* الخلفية بيضاء عند النزول */
+}
+
+
+
+/* قسم الصورة في الأعلى */
+.hole{
+    background-image: url('bg.png');
+    background-size: cover;
+    background-position: center; 
+    width: 100%;
+    height: 100vh; /* يغطي الشاشة بالكامل */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.hole h1 {
+    position: absolute;
+    top: 38%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 170px;
+}
+.hole h2{
+    position: absolute;
+    top: 53%;
+    right: -2%;
+    transform: translate(-50%, -50%);
+    font-size: 17px;
+  
+}
+
+
+.buttons {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    position: absolute;  /* تثبيت الأزرار في الأعلى */
+    top: 20px;  /* المسافة من الأعلى */
+    left: 50%;  /* وضعها في منتصف الصفحة */
+    transform: translateX(-50%); /* تصحيح المحاذاة لتكون بالمنتصف تمامًا */
+}
+
+.buttons li {
+    display: inline;
+  
+}
+
+.buttons a {
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 1000;
+    transition: 0.3s;
+}
+
+.buttons a:hover {
+    color: #f8c471;
+}
+
+.top-line {
+    position: absolute;
+    top: 70px; /* المسافة من الأعلى */
+    left: 0;
+    width: 100%;
+    height: 1px; /* سمك الخط */
+    background-color: white; /* لون الخط */
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    border: 2px solid white; /* الحدود بيضاء */
+    border-radius: 25px; /* يجعل الحواف دائرية */
+    padding: 5px 15px;
+    width: 250px; /* عرض مربع البحث */
+    background: rgba(255, 255, 255, 0.3); /* خلفية شفافة بنسبة 30% */
+    position: absolute; /* تحديد موضع العنصر بالنسبة للصفحة */
+    top: 20px; /* المسافة من الأعلى */
+    right: 20px; /* المسافة من اليمين */
+}
+
+.search-box input {
+    border: none;
+    outline: none;
+    background: transparent;
+    color: white; /* لون النص */
+    font-size: 16px;
+    width: 100%;
+}
+
+.search-box button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+}
+
+.circle-image {
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute; /* جعل الصورة في موقع محدد */
+    top: 950px; /* المسافة من الأعلى */
+    left: -10%; /* تحريك الصورة لليسار */
+}
+
+.circle-image2{
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute; /* جعل الصورة في موقع محدد */
+    top: 984px; /* المسافة من الأعلى */
+    left: -9%; /* تحريك الصورة لليسار */
+}
+
+.welcome h3 {
+    position: absolute; 
+    top: 600px;  
+    left: 55%;  
+    transform: translateX(-50%); 
+    font-size: 200px;
+    color: rgb(15, 58, 2);
+}
+
+.welcome h4{
+    position: absolute; 
+    top: 1100px; /* المسافة من الأعلى */
+    left: 33%;
+    font-size: 30px;
+    
+}
+.circle-image3{
+    width: 550px;
+    height: 550px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute; /* جعل الصورة في موقع محدد */
+    top: 1600px; /* المسافة من الأعلى */
+    left: 70%; /* تحريك الصورة لليسار */
+}
+
+.circle-image4{
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute; /* جعل الصورة في موقع محدد */
+    top: 1900px; /* المسافة من الأعلى */
+    left: -5%; /* تحريك الصورة لليسار */
+}
+
+
+.video{
+    top: 1750px; 
+    left: 20%;
+    position: absolute; 
+
+}
+
+
+
+.logo {
+    position: absolute; /* وضعه في أعلى الصفحة */
+    top: 5px; /* المسافة من الأعلى */
+    left: 20px; /* المسافة من اليسار */
+    width: 40px; /* عرض الشعار */
+    height: 40px; /* ارتفاع الشعار */
+    border-radius: 50%; /* جعل الشعار دائريًا */
+    object-fit: cover; /* لضمان تغطية الصورة بالكامل */
+    border: 2px solid white; /* إضافة حدود بيضاء للشعار */
+    font-size: 10px;
+}
+

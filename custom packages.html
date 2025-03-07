@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golf Resort</title>
+    <link rel="stylesheet" href="custom packagescss.css">
+    <style>
+       
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+
+
+<style>
+    .r1 h1 {
+        font-size: 20px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    .r1 ul {
+        list-style-type: none;
+        padding-left: 0;
+        margin-top: 0;
+    }
+
+    .r1 ul li {
+        margin-bottom: 3px; 
+        font-size: 18px;
+    }
+</style>
+</head>
+<body>
+    
+    <div class="top-line"></div>
+
+    <div class="hole">
+        <h1>custom packages</h1>
+       
+    </div>
+
+    <div class="search-box">
+        <input type="text" placeholder="Search...">
+        <button type="submit"><i class="fas fa-search"></i></button>
+    </div>
+
+    <img src="logoo.jpeg" alt="Website Logo" class="logo">
+
+
+<header class="header">
+    <ul class="buttons">
+        <li class="dropdown">
+            <a href="#" onclick="toggleMenu(event)">MENU</a>
+            <div class="dropdown-content" id="menuDropdown">
+                <a href="restaurants.html">Restaurants</a>
+                <a href="hotels.html">Hotels</a>
+                <a href="seaview.html">Sea view stadium</a>
+                <a href="custom packages.html">Custom packages</a>
+                <a href="training ground.html">Training ground</a>
+                <a href="questions.html">Questions</a>
+            </div>
+        </li>
+        <li><a href="golf countact.html">CONTACT</a></li>
+        <li><a href="جولف.html">HOME</a></li>
+    </ul>
+</header>
+    
+
+<div class="r1">
+    <h1> 
+        <b>1- Five Rounds Package:</b><br>
+        - Full stay for five nights in a luxury suite.<br>
+        - Five rounds – 18 holes.<br>
+        - One guaranteed round at the famous Sea View Golf Course.<br>
+        - Complimentary digital training session.<br><br>
+
+        <b>2- Triple Round Package:</b><br>
+        - Two-night stay in a double room with breakfast.<br>
+        - Three rounds – 18 holes, including one round at the famous Sea View Golf Course.<br>
+        - Complimentary golf cart rental.<br>
+        - 20% discount at the Pro Shop.<br><br>
+
+        <b>3- Relaxation Retreat:</b><br>
+        - One-night stay with a full breakfast.<br>
+        - Dinner at any of the resort’s restaurants.<br>
+        - Access to golf courses (fees apply, Sea View Golf Course excluded).<br>
+        - Complimentary club rental.<br><br>
+
+        <b>4- Customized Packages:</b><br>
+        Tailored packages for corporate events and extended stays are available.<br>
+        Customers must contact the company to arrange any customized packages.
+    </h1>
+</div>
+ <div class="r2">
+    <h2>Custom Packages</h2>
+ </div>
+
+<script>
+    function toggleMenu(event) {
+        event.preventDefault();
+        document.getElementById("menuDropdown").classList.toggle("show");
+    }
+
+    // إغلاق القائمة عند النقر خارجها
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropdown a')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+</script>
+
+
+<script src="jsgolf.js"></script>
+</body>
+</html>

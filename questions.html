@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Golf Resort</title>
+    <link rel="stylesheet" href="questionscss.css">
+    <style>
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+        }
+
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: black;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="top-line"></div>
+
+    <div class="hole">
+        <h1> Frequently Asked Questions</h1>
+    </div>
+
+<header class="header">
+    <ul class="buttons">
+        <li class="dropdown">
+            <a href="#" onclick="toggleMenu(event)">MENU</a>
+            <div class="dropdown-content" id="menuDropdown">
+                <a href="restaurants.html">Restaurants</a>
+                <a href="hotels.html">Hotels</a>
+                <a href="seaview.html">Sea view stadium</a>
+                <a href="custom packages.html">Custom packages</a>
+                <a href="training ground.html">Training ground</a>
+                <a href="questions.html">Questions</a>
+            </div>
+        </li>
+        <li><a href="golf countact.html">CONTACT</a></li>
+        <li><a href="جولف.html">HOME</a></li>
+    </ul>
+</header>
+    
+<div class="search-box">
+    <input type="text" placeholder="Search...">
+    <button type="submit"><i class="fas fa-search"></i></button>
+</div>
+ 
+<img src="logoo.jpeg" alt="Website Logo" class="logo">
+
+<div class="faq-container">
+    <h2>Frequently Asked Questions About Golf Resorts</h2>
+
+    <div class="faq-item">
+        <button class="faq-question">📍 Where is the resort located?</button>
+        <div class="faq-answer">
+         <b>  The resort is located in a beautiful coastal area with stunning sea views, easily accessible from the airport and the city.</b> 
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">💰 What are the accommodation prices?</button>
+        <div class="faq-answer">
+         <b>  Prices vary depending on the room type and season, ranging from $200 to $500 per night, with discounts for long-term bookings.</b> 
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">🏌️‍♂️ Are golf lessons available for beginners?</button>
+        <div class="faq-answer">
+          <b>  Yes! The resort offers golf lessons for beginners with professional instructors, with options for private or group sessions.</b>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">🎟 Are there special offers or family packages?</button>
+        <div class="faq-answer">
+          <b>  Yes, the resort offers family packages that include accommodation and entertainment activities at discounted prices, along with group offers.</b>
+        </div>
+    </div>
+
+    <div class="faq-item">
+        <button class="faq-question">🍽 Does the resort have restaurants?</button>
+        <div class="faq-answer">
+          <b>  Yes, the resort features several restaurants serving delicious local and international cuisine, with vegetarian options and room delivery services.</b>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    function toggleMenu(event) {
+        event.preventDefault();
+        document.getElementById("menuDropdown").classList.toggle("show");
+    }
+
+    // إغلاق القائمة عند النقر خارجها
+    window.onclick = function(event) {
+        if (!event.target.matches('.dropdown a')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            for (var i = 0; i < dropdowns.length; i++) {
+                var openDropdown = dropdowns[i];
+                if (openDropdown.classList.contains('show')) {
+                    openDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+
+    // إظهار/إخفاء الأجوبة عند الضغط على الأسئلة
+    document.addEventListener("DOMContentLoaded", function () {
+        const faqQuestions = document.querySelectorAll('.faq-question');
+
+        faqQuestions.forEach(function(question) {
+            question.addEventListener('click', function() {
+                const answer = this.nextElementSibling;
+                answer.style.display = (answer.style.display === 'block') ? 'none' : 'block';
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
+
